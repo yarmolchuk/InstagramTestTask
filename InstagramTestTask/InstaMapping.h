@@ -13,6 +13,6 @@
 
 @required
 
-+(RKObjectMapping *)mapObject;
++ (RKObjectMapping *)mapObject;
 
 @end

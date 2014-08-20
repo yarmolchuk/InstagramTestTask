@@ -12,8 +12,8 @@
 
 + (instancetype)sharedInstance;
 
-- (void)getUserWithName:(NSString *)user andCompletionBlock:(void(^)(NSArray *users))block;
+- (void)userWithName:(NSString *)user andCompletionBlock:(void(^)(NSArray *users))block;
 
-- (void)getMediaRecentInUserWithId:(NSString*)Id count:(int)count minId:(NSString*)minId maxId:(NSString*)maxId minTimestamp:(NSDate*)minTimestamp maxTimestamp:(NSDate*)maxTimestamp andCompletionBlock:(void(^)(NSArray *photos))block;
+- (void)mediaRecentInUserWithId:(NSString*)Id count:(NSInteger)count minId:(NSString*)minId maxId:(NSString*)maxId minTimestamp:(NSDate*)minTimestamp maxTimestamp:(NSDate*)maxTimestamp andCompletionBlock:(void(^)(NSArray *photos))block;
 
 @end

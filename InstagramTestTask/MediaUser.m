@@ -10,6 +10,10 @@
 #import "RKObjectMapping.h"
 #import "RKRelationshipMapping.h"
 
+@interface MediaUser () <InstaMapping>
+
+@end
+
 @implementation MediaUser
 
 +(RKObjectMapping *)mapObject

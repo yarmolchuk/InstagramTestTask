@@ -52,7 +52,7 @@ static NSString* callback_url;
     client_secret = configs[@"InstagramClientSecret"];
 }
 
-- (void)getUserWithName:(NSString *)name andCompletionBlock:(void(^)(NSArray *users))block
+- (void)userWithName:(NSString *)name andCompletionBlock:(void(^)(NSArray *users))block
 {
     NSString* currentParam = @"client_id";
     NSString* currentParamValue  = client_id;
@@ -85,7 +85,7 @@ static NSString* callback_url;
 }
 
 
-- (void)getMediaRecentInUserWithId:(NSString*)Id count:(int)count minId:(NSString*)minId maxId:(NSString*)maxId minTimestamp:(NSDate*)minTimestamp maxTimestamp:(NSDate*)maxTimestamp andCompletionBlock:(void(^)(NSArray *photos))block
+- (void)mediaRecentInUserWithId:(NSString*)Id count:(NSInteger)count minId:(NSString*)minId maxId:(NSString*)maxId minTimestamp:(NSDate*)minTimestamp maxTimestamp:(NSDate*)maxTimestamp andCompletionBlock:(void(^)(NSArray *photos))block
 {
     
     NSString* currentParam = @"client_id";

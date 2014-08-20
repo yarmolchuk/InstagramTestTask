@@ -10,7 +10,7 @@
 #import "RKResponseDescriptor.h"
 #import "InstaMapping.h"
 
-@interface InstaUser : NSObject <InstaMapping>
+@interface InstaUser : NSObject
 
 @property (nonatomic, copy) NSString *uidUser;
 @property (nonatomic, copy) NSString *username;
@@ -18,5 +18,7 @@
 @property (nonatomic, copy) NSString *website;
 @property (nonatomic, copy) NSString *profile_picture;
 @property (nonatomic, copy) NSString *full_name;
+
++ (RKObjectMapping *)mapObject;
 
 @end

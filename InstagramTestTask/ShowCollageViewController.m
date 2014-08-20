@@ -44,12 +44,21 @@
     return images;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        
+        images = [NSMutableArray array];
+        urls = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    images = [NSMutableArray array];
-    urls = [NSMutableArray array];    
 }
 
 -(void)viewDidAppear:(BOOL)animated

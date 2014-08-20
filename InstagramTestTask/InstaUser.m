@@ -9,10 +9,13 @@
 #import "InstaUser.h"
 #import "RKObjectMapping.h"
 
+@interface InstaUser () <InstaMapping>
+
+@end
+
 @implementation InstaUser
 
-
-+(RKObjectMapping *)mapObject
++ (RKObjectMapping *)mapObject
 {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self];
     

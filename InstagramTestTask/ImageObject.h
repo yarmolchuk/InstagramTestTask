@@ -10,12 +10,13 @@
 #import "RKResponseDescriptor.h"
 #import "InstaMapping.h"
 
-@interface ImageObject :  NSObject <InstaMapping>
+@interface ImageObject :  NSObject
 
-@property (nonatomic, assign) float widthImage;
-@property (nonatomic, assign) float heightImage;
+@property (nonatomic, assign) CGFloat widthImage;
+@property (nonatomic, assign) CGFloat heightImage;
+
 @property (nonatomic, copy) NSString *urlImage;
 
-+(RKObjectMapping *)mapObject;
++ (RKObjectMapping *)mapObject;
 
 @end

@@ -8,9 +8,13 @@
 
 #import "ImageObject.h"
 
+@interface ImageObject () <InstaMapping>
+
+@end
+
 @implementation ImageObject
 
-+(RKObjectMapping *)mapObject
++ (RKObjectMapping *)mapObject
 {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self];
     

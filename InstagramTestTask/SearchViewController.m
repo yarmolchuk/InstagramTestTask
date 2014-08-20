@@ -28,11 +28,20 @@
 
 @implementation SearchViewController
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+    
+        allPhotos = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    allPhotos = [NSMutableArray array];
 }
 
 - (IBAction)actComeCollage:(id)sender
@@ -45,7 +54,7 @@
     }
     
     [self showProgress];
-    [[RequestManager sharedInstance] getUserWithName:self.tfUserName.text andCompletionBlock:^(NSArray *users) {
+    [[RequestManager sharedInstance] userWithName:self.tfUserName.text andCompletionBlock:^(NSArray *users) {
        
         if (users.count > 1) {
             
@@ -65,7 +74,7 @@
 
 - (void)loadingUserPhoto
 {
-    [[RequestManager sharedInstance] getMediaRecentInUserWithId:idSearchUser count:20 minId:@"" maxId:maxPhotoId minTimestamp:nil maxTimestamp:nil andCompletionBlock:^(NSArray *photos) {
+    [[RequestManager sharedInstance] mediaRecentInUserWithId:idSearchUser count:20 minId:@"" maxId:maxPhotoId minTimestamp:nil maxTimestamp:nil andCompletionBlock:^(NSArray *photos) {
         
         if (photos.count) {
             
@@ -101,7 +110,6 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     [self hideProgress];

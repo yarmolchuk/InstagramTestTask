@@ -72,7 +72,7 @@
         
     selecthUser = [self.arrUsers objectAtIndex:indexPath.row];
     
-    [[RequestManager sharedInstance] getUserWithName:selecthUser.uidUser andCompletionBlock:^(NSArray *users) {
+    [[RequestManager sharedInstance] userWithName:selecthUser.uidUser andCompletionBlock:^(NSArray *users) {
         
         idSearchUser = selecthUser.uidUser;
         

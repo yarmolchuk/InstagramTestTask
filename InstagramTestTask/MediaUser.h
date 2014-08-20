@@ -11,16 +11,16 @@
 #import "InstaMapping.h"
 #import "ImageObject.h"
 
-@interface MediaUser : NSObject <InstaMapping>
+@interface MediaUser : NSObject 
 
 @property (nonatomic, strong) ImageObject *imgLow;
 @property (nonatomic, strong) ImageObject *imgStandart;
 @property (nonatomic, strong) ImageObject *imgThumbnail;
 
 @property (nonatomic, copy) NSString *contentId;
-@property (nonatomic, assign) int likes;
+@property (nonatomic) NSInteger likes;
 
-+(RKObjectMapping *)mapObject;
++ (RKObjectMapping *)mapObject;
 
 
 @end
