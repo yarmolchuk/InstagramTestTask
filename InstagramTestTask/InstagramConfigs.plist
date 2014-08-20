@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>InstagramClientId</key>
+	<string>6c4ca92c9d0447d4835e008630b00cca</string>
+	<key>InstagramClientSecret</key>
+	<string>c4785c6716dc4b1abe4947b3468b0542</string>
+	<key>InstagramClientCallbackURL</key>
+	<string>http://api.instamapapp.com/callback</string>
+</dict>
+</plist>
